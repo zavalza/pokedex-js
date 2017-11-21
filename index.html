@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Pokedex-JS | By Paul Zavalza</title>
+    <meta name="description" content="A simple pokedex to carry anywhere">
+    <meta name="author" content="Paul Zavalza">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <script type="text/javascript">
+      fetch("https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json")
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+          console.log(data);
+        });
+    </script>
+  </head>
+  <body>
+    <h1>Pokedex-JS</h1>
+  </body>
+</html>
