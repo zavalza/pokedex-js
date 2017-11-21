@@ -8,15 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="pokedex.js"></script>
     <script type="text/javascript">
       fetch("https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json")
         .then(function(response) { return response.json(); })
         .then(function(data) {
-          console.log(data);
+          Pokedex.setPokemons(data.pokemon);
+          Pokedex.displayPokemon();
         });
     </script>
   </head>
   <body>
     <h1>Pokedex-JS</h1>
+    <div class="pokemon">
+      <img id="pokemonImage">
+      <p id="pokemonName"></p>
+      <i class="fa fa-arrow-left" aria-hidden="true" onclick="Pokedex.decrementIndex();"></i>
+      <span id="pokemonNumber"></span>
+      <i class="fa fa-arrow-right" aria-hidden="true" onclick="Pokedex.incrementIndex();"></i>
+    </div>
   </body>
 </html>
