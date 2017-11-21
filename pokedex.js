@@ -13,15 +13,22 @@ Pokedex = {
   },
 
   decrementIndex : function(){
-    if(this.index > 0) {
+    if(this.index <= 0) {
+      this.index = 150;
+    }
+    else {
       this.index = this.index-1;
     }
+
     this.displayPokemon();
   },
 
   incrementIndex : function(){
-    if(this.index < 151) {
+    if(this.index < 150) {
       this.index = this.index+1;
+    }
+    else {
+      this.index = 0;
     }
     this.displayPokemon();
   }
