@@ -9,7 +9,14 @@ Pokedex = {
   displayPokemon: function(){
     document.getElementById("pokemonImage").src = this.pokemons[this.index].img;
     document.getElementById("pokemonName").innerHTML = this.pokemons[this.index].name;
-    document.getElementById("pokemonNumber").innerHTML = this.pokemons[this.index].num;
+    document.getElementById("pokemonNumber").value = this.pokemons[this.index].num;
+  },
+
+  setIndex: function(pokemonNumber){
+    if(pokemonNumber > 0 && pokemonNumber <= 151) {
+      this.index = pokemonNumber -1;
+    }
+    this.displayPokemon();
   },
 
   decrementIndex : function(){
