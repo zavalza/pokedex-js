@@ -11,6 +11,7 @@ input[type=number] {
 .pokedex {
   height: 100vh;
   width: 100vw;
+  overflow: scroll;
   text-align: center;
   background-color: #e87a7a;
 }
@@ -20,10 +21,16 @@ input[type=number] {
   color: white;
 }
 
+.pokedex-navigation-index {
+  width: 3.5em;
+  text-align: center;
+}
+
 .pokedex-pokemon {
   display: inline-block;
   background-color: antiquewhite;
   padding: 1em 2em;
+  margin-bottom: 1em;
 }
 
 .pokedex-pokemon-name {
@@ -33,13 +40,4 @@ input[type=number] {
 
 .pokedex-pokemon-details p {
   margin-bottom: 3px;
-}
-
-.pokedex-navigation {
-  padding: 1em;
-}
-
-.pokedex-navigation-index {
-  width: 3.5em;
-  text-align: center;
 }

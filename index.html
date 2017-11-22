@@ -23,6 +23,11 @@
   <body>
     <div class="pokedex">
       <h1 class="pokedex-title">Pokedex-JS</h1>
+      <div class="pokedex-navigation">
+        <i class="fa fa-arrow-left" aria-hidden="true" onclick="Pokedex.decrementIndex();"></i>
+        <input type="number" id="pokemonNumber" class="pokedex-navigation-index" onchange="Pokedex.setIndex(this.value);">
+        <i class="fa fa-arrow-right" aria-hidden="true" onclick="Pokedex.incrementIndex();"></i>
+      </div>
       <div class="pokedex-pokemon">
         <div id="pokemonCard" class="pokedex-pokemon-card">
           <img id="pokemonImage">
@@ -43,11 +48,6 @@
           <p id="pokemonWeaknesses"></p>
           <button onclick="Pokedex.showPokemonCard();">Close details</button>
         </div>
-      </div>
-      <div class="pokedex-navigation">
-        <i class="fa fa-arrow-left" aria-hidden="true" onclick="Pokedex.decrementIndex();"></i>
-        <input type="number" id="pokemonNumber" class="pokedex-navigation-index" onchange="Pokedex.setIndex(this.value);">
-        <i class="fa fa-arrow-right" aria-hidden="true" onclick="Pokedex.incrementIndex();"></i>
       </div>
     </div>
   </body>
