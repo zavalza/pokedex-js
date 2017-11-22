@@ -8,7 +8,30 @@ input[type=number] {
   -moz-appearance:textfield;
 }
 
-.pokedex-input {
+.pokedex {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background-color: #e87a7a;
+}
+
+.pokedex-title {
+  padding-top: 1em;
+  color: white;
+}
+
+.pokedex-pokemon {
+  display: inline-block;
+  background-color: antiquewhite;
+  padding: 1em 2em;
+}
+
+.pokedex-pokemon-name {
+  color: #ff7a00;
+  font-weight: bold;
+}
+
+.pokedex-pokemon-number {
   width: 3.5em;
   text-align: center;
 }

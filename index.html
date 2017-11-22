@@ -21,13 +21,15 @@
     </script>
   </head>
   <body>
-    <h1>Pokedex-JS</h1>
-    <div class="pokemon">
-      <img id="pokemonImage">
-      <p id="pokemonName"></p>
-      <i class="fa fa-arrow-left" aria-hidden="true" onclick="Pokedex.decrementIndex();"></i>
-      <input type="number" id="pokemonNumber" class="pokedex-input" onchange="Pokedex.setIndex(this.value);">
-      <i class="fa fa-arrow-right" aria-hidden="true" onclick="Pokedex.incrementIndex();"></i>
+    <div class="pokedex">
+      <h1 class="pokedex-title">Pokedex-JS</h1>
+      <div class="pokedex-pokemon">
+        <img id="pokemonImage">
+        <p id="pokemonName" class="pokedex-pokemon-name"></p>
+        <i class="fa fa-arrow-left" aria-hidden="true" onclick="Pokedex.decrementIndex();"></i>
+        <input type="number" id="pokemonNumber" class="pokedex-pokemon-number" onchange="Pokedex.setIndex(this.value);">
+        <i class="fa fa-arrow-right" aria-hidden="true" onclick="Pokedex.incrementIndex();"></i>
+      </div>
     </div>
   </body>
 </html>
