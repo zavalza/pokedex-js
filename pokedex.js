@@ -4,6 +4,7 @@ Pokedex = {
 
   setPokemons: function(pokemons){
     this.pokemons = pokemons;
+    this._buildPokemonsCollage();
   },
 
   showPokemonCard: function(){
@@ -61,5 +62,18 @@ Pokedex = {
     document.getElementById("pokemonSpawnTime").innerHTML = "Spawn time: " + pokemon.spawn_time;
     document.getElementById("pokemonMultipliers").innerHTML = "Multipliers: " + pokemon.multipliers;
     document.getElementById("pokemonWeaknesses").innerHTML = "Weaknesses: " + pokemon.weaknesses;
+  },
+
+  _buildPokemonsCollage: function(){
+    this.pokemons.map(function(pokemon) {
+      let image = document.createElement("img");
+      image.setAttribute("id", pokemon.id);
+      image.setAttribute("src", pokemon.img);
+      image.setAttribute("class", "pokedex-collage-img");
+      image.setAttribute("title", pokemon.name);
+      image.setAttribute("alt", pokemon.name);
+      image.setAttribute("onclick", "Pokedex.setIndex(this.id);");
+      document.getElementById("pokedexCollage").appendChild(image);
+    });
   }
 }
