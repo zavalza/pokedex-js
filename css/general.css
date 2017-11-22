@@ -31,7 +31,15 @@ input[type=number] {
   font-weight: bold;
 }
 
-.pokedex-pokemon-number {
+.pokedex-pokemon-details p {
+  margin-bottom: 3px;
+}
+
+.pokedex-navigation {
+  padding: 1em;
+}
+
+.pokedex-navigation-index {
   width: 3.5em;
   text-align: center;
 }

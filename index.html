@@ -16,7 +16,7 @@
         .then(function(response) { return response.json(); })
         .then(function(data) {
           Pokedex.setPokemons(data.pokemon);
-          Pokedex.displayPokemon();
+          Pokedex.showPokemonCard();
         });
     </script>
   </head>
@@ -24,10 +24,29 @@
     <div class="pokedex">
       <h1 class="pokedex-title">Pokedex-JS</h1>
       <div class="pokedex-pokemon">
-        <img id="pokemonImage">
-        <p id="pokemonName" class="pokedex-pokemon-name"></p>
+        <div id="pokemonCard" class="pokedex-pokemon-card">
+          <img id="pokemonImage">
+          <p id="pokemonName" class="pokedex-pokemon-name"></p>
+          <button onclick="Pokedex.showPokemonDetails();">See details</button>
+        </div>
+        <div id="pokemonDetails" class="pokedex-pokemon-details">
+          <p id="pokemonType"></p>
+          <p id="pokemonHeight"></p>
+          <p id="pokemonWeight"></p>
+          <p id="pokemonCandy"></p>
+          <p id="pokemonCandyCount"></p>
+          <p id="pokemonEgg"></p>
+          <p id="pokemonSpawnChance"></p>
+          <p id="pokemonAvgSpawns"></p>
+          <p id="pokemonSpawnTime"></p>
+          <p id="pokemonMultipliers"></p>
+          <p id="pokemonWeaknesses"></p>
+          <button onclick="Pokedex.showPokemonCard();">Close details</button>
+        </div>
+      </div>
+      <div class="pokedex-navigation">
         <i class="fa fa-arrow-left" aria-hidden="true" onclick="Pokedex.decrementIndex();"></i>
-        <input type="number" id="pokemonNumber" class="pokedex-pokemon-number" onchange="Pokedex.setIndex(this.value);">
+        <input type="number" id="pokemonNumber" class="pokedex-navigation-index" onchange="Pokedex.setIndex(this.value);">
         <i class="fa fa-arrow-right" aria-hidden="true" onclick="Pokedex.incrementIndex();"></i>
       </div>
     </div>
